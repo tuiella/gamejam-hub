@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>템플릿 팩 · GameJam Hub</title>
+<meta name="description" content="GameJam Hub에서 내려받을 수 있는 템플릿 팩 목록: 장르별 기획서, 밸런스 표, 도식, 무드보드.">
+<link rel="icon" href="assets/mark.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/mark.svg" width="28" height="28" alt=""> GameJam Hub</a>
+    <nav aria-label="사이트">
+      <a href="./">소개</a>
+      <a href="guide.html">사용 설명서</a>
+      <a href="remote.html">원격 팀</a>
+      <a href="dlc.html" aria-current="page">템플릿 팩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap" style="grid-template-columns:minmax(0,1fr)">
+    <article style="max-width:none">
+      <h1>템플릿 팩</h1>
+      <p class="intro" style="max-width:var(--measure)">호스트가 설정 → 콘텐츠(DLC)에서 내려받으면 팀 전원의 새 문서 창에 템플릿이 추가됩니다. 팀원은 인터넷 없이 받습니다. 팩에는 문서·시트·도식·무드보드 템플릿만 들어 있습니다.</p>
+      <div id="packs" class="packs"><p class="loading">팩 목록을 불러오는 중입니다.</p></div>
+      <p class="note" style="margin-top:28px">팩 원본은 <a href="https://github.com/tuiella/gamejam-hub-dlc">github.com/tuiella/gamejam-hub-dlc</a>에 있습니다.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GameJam Hub</span>
+    <a href="./">소개</a>
+    <a href="guide.html">사용 설명서</a>
+    <a href="remote.html">원격 팀</a>
+  </div>
+</footer>
+
+<script>
+// The list comes straight from the pack repository, so this page never goes out of date.
+const BASE = "https://raw.githubusercontent.com/tuiella/gamejam-hub-dlc/main/";
+const KIND = { md: "문서", sheet: "시트", diagram: "도식", moodboard: "무드보드" };
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+(async () => {
+  const box = document.getElementById("packs");
+  try {
+    const index = await (await fetch(BASE + "index.json")).json();
+    const packs = await Promise.all(index.packs.map(async (p) => ({ ...p, body: await (await fetch(BASE + p.path)).json() })));
+    box.textContent = "";
+    for (const p of packs) {
+      const card = el("section", "pack");
+      const head = el("header");
+      head.append(el("h2", null, p.name), el("span", "meta", `v${p.version} · 템플릿 ${p.templates}개`));
+      card.append(head, el("p", null, p.description));
+      const ul = el("ul");
+      for (const t of p.body.templates) {
+        const li = el("li");
+        li.append(el("span", `kind ${t.kind}`, KIND[t.kind] || t.kind), el("span", null, t.name));
+        if (t.hint) li.title = t.hint;
+        ul.append(li);
+      }
+      card.append(ul);
+      box.append(card);
+    }
+  } catch {
+    box.textContent = "";
+    box.append(el("p", "loading", "팩 목록을 불러오지 못했습니다. 아래 저장소에서 직접 볼 수 있습니다."));
+  }
+})();
+</script>
+</body>
+</html>
