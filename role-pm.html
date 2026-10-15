@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PM · 호스트 안내 · GameJam Hub</title>
+<meta name="description" content="PM과 호스트가 GameJam Hub로 잼을 열고, 진행을 챙기고, 마감 결과를 모으는 흐름.">
+<link rel="icon" href="assets/mark.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/mark.svg" width="28" height="28" alt=""> GameJam Hub</a>
+    <nav aria-label="사이트">
+      <a href="./">소개</a>
+      <a href="guide.html">사용 설명서</a>
+      <a href="roles.html" aria-current="page">역할별 안내</a>
+      <a href="remote.html">원격 팀</a>
+      <a href="dlc.html">템플릿 팩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <aside aria-label="목차">
+      <a href="#open">잼 열기</a>
+      <a href="#plan">킥오프 → 계획</a>
+      <a href="#run">진행 관리</a>
+      <a href="#change">결정 관리</a>
+      <a href="#qa">빌드·QA</a>
+      <a href="#ai">AI 관리</a>
+      <a href="#switch">호스트 교대</a>
+      <a href="#end">마감</a>
+      <a href="#daily">매일 보는 곳</a>
+    </aside>
+    <article>
+      <nav class="role-switch" aria-label="역할"><a href="role-planner.html">기획자</a><a href="role-artist.html">아티스트</a><a href="role-programmer.html">프로그래머</a><a href="role-pm.html" aria-current="page">PM · 호스트</a></nav>
+      <h1>PM · 호스트</h1>
+      <p class="intro">잼을 열고, 일정과 막힌 사람을 챙기고, 마지막에 팀의 결과와 포트폴리오를 한 폴더로 모읍니다. 보통 PM이 호스트를 맡습니다.</p>
+      <h2 id="open">잼 열기 (도착 직후)</h2>
+      <ul>
+        <li>시작 화면 → <b>잼 열기</b>: 팀 이름, 기간, 내 역할을 정하면 <b>방 코드</b>가 나옵니다.</li>
+        <li>호스트 PC는 절전 방지와 자동 백업을 켜고, Windows 네트워크가 ‘공용’이면 경고와 해결 방법을 보여 줍니다.</li>
+        <li><b>설정 → 연결</b>에서 <b>백업 호스트</b>를 지정하세요. 호스트 PC가 꺼져도 같은 방 코드로 이어받습니다.</li>
+        <li>게임 이름이 정해지면 <b>설정 → 호스트</b>에서 붙입니다. 앱 상단에 ‘팀이름: 게임이름’으로 보입니다.</li>
+        <li>필요하면 <b>설정 → 콘텐츠(DLC)</b>에서 <a href="dlc.html">템플릿 팩</a>을 받습니다. 인터넷은 호스트 PC만 필요합니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/pm-hosting.png" title="원본 크기로 보기"><img src="assets/roles/pm-hosting.png" width="748" height="600" alt="연결 화면: 호스트·백업 호스트·팀원 연결 도식" loading="lazy"></a><figcaption>누가 호스트이고 백업은 누구인지 도식으로 보입니다.</figcaption></figure>
+      <h2 id="plan">킥오프 → 계획</h2>
+      <ul>
+        <li>잼을 열면 3일짜리 <b>기본 일정</b>(기획 확정, 1차 플레이 가능, 아트 마감, 최종 빌드)이 생깁니다. 보드 위에서 고치세요.</li>
+        <li>회의록은 <a href="dlc.html">팀 운영 팩</a>의 킥오프 회의록·역할 분담표·리스크 목록 템플릿에 적습니다. 현장에서 팀이 꾸려지면 24시간 AI 잼 팩의 <b>현장 팀 빌딩 카드</b>가 도움이 됩니다.</li>
+      </ul>
+      <h2 id="run">진행 관리 (잼 내내)</h2>
+      <ul>
+        <li><b>작업</b> 보드의 <b>전체</b>에서 ‘담당 없음’은 배정하고, ‘대기’가 쌓인 사람은 일이 몰린 신호로 봅니다.</li>
+        <li><b>팀</b> 화면에서 지금 하는 일, 자리 비움과 돌아올 시각, 막힘을 봅니다.</li>
+        <li><kbd>Ctrl</kbd>+클릭 <b>핑</b>으로 그 자리를 팀원 화면에 표시하고, <kbd>Ctrl</kbd>을 누른 채 움직이면 <b>사람 호출 휠</b>이 나옵니다.</li>
+        <li><b>활동</b>은 자리를 비운 사이 바뀐 것을 묶어 보여 줍니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/pm-board.png" title="원본 크기로 보기"><img src="assets/roles/pm-board.png" width="748" height="480" alt="작업 보드 전체 보기: 일정 줄과 네 칸의 카드" loading="lazy"></a><figcaption>‘전체’에서 담당 없음과 대기가 쌓인 곳을 봅니다.</figcaption></figure>
+      <figure class="shot role-shot"><a href="assets/roles/pm-team.png" title="원본 크기로 보기"><img src="assets/roles/pm-team.png" width="748" height="560" alt="팀 화면: 사람별 지금 하는 일, 막힘, 연락" loading="lazy"></a><figcaption>막힌 사람은 빨간 표시로 바로 보입니다.</figcaption></figure>
+      <h2 id="change">기획 변경 · 결정 관리</h2>
+      <ul>
+        <li>회의에서 바뀐 것은 <b>기획 변경 기록</b>으로 남깁니다. 영향받는 역할이 확인하고 ‘반영 완료’까지 따라갑니다.</li>
+        <li>범위를 줄일 때는 <b>범위 줄이기 체크리스트</b>, 위험한 일은 <b>리스크 목록</b> 시트로 관리합니다.</li>
+      </ul>
+      <h2 id="qa">빌드 · QA 관리</h2>
+      <ul>
+        <li>올라온 빌드는 STABLE(플레이용) 또는 BROKEN(쓰지 말 것)으로 표시합니다.</li>
+        <li>1차 플레이 가능 시점에 팀 전원이 <b>PLAY</b>로 실행하고 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Q</kbd>로 보고하는 QA 시간을 진행하세요.</li>
+        <li>마감 직전 최종 빌드를 <b>FINAL</b>로 표시합니다.</li>
+      </ul>
+      <h2 id="ai">AI 관리</h2>
+      <ul>
+        <li><b>AI → 팀 AI</b>에서 누가 AI를 연결했는지, 각 AI가 무엇을 바꿨는지 봅니다. 호스트는 어느 AI든 한 번에 되돌릴 수 있습니다.</li>
+        <li>잼 초반에 <b>사용량 아끼기</b>를 공유하세요. 일마다 새 대화, 작은 모델, 내 역할에 맞는 도구 묶음. 잼 도중 AI 사용량을 다 쓰면 끝까지 도움을 못 받습니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/pm-ai.png" title="원본 크기로 보기"><img src="assets/roles/pm-ai.png" width="748" height="640" alt="AI 화면: 연결, 도구 묶음 선택(역할별 사용량), 사용량 아끼기" loading="lazy"></a><figcaption>도구 묶음이 작을수록 AI가 요청할 때마다 드는 사용량이 줄어듭니다.</figcaption></figure>
+      <h2 id="switch">호스트 교대가 필요할 때</h2>
+      <ul>
+        <li>호스트 PC를 옮길 때는 <b>설정 → 연결 → 호스트 넘기기</b>. 팀원은 다시 참가할 필요 없이 새 호스트에 붙습니다.</li>
+        <li>호스트 PC가 갑자기 꺼지면 백업 호스트가 <b>이어받기</b>를 누릅니다.</li>
+      </ul>
+      <h2 id="end">마감</h2>
+      <ul>
+        <li>팀원들에게 <b>크레딧</b>(맡은 일)과 <b>한마디</b>를 남기도록 안내합니다.</li>
+        <li><b>설정 → 호스트 → 마감 내보내기</b>로 요약, 문서, 데이터 표, 에셋 마지막 버전, 최종 빌드, 카드·QA 목록, <b>팀원 전원의 포트폴리오</b>, 복원용 백업을 한 폴더로 모읍니다.</li>
+        <li>먼저 떠난 학생에게는 내보낸 폴더의 <code>포트폴리오/이름/</code>을 전해 주세요.</li>
+      </ul>
+      <h2 id="daily">PM이 매일 보는 곳</h2>
+      <table><thead><tr><th>궁금한 것</th><th>보는 곳</th></tr></thead><tbody><tr><td>지금 누가 무엇을 하나? 막힌 사람은?</td><td>팀</td></tr><tr><td>배정 안 된 일, 일이 몰린 사람은?</td><td>작업 보드 → 전체</td></tr><tr><td>일정대로 가고 있나?</td><td>보드 위 일정</td></tr><tr><td>자리 비운 사이 무슨 일이?</td><td>활동</td></tr><tr><td>지금 플레이할 빌드는? 남은 큰 문제는?</td><td>빌드(STABLE), QA(CRITICAL)</td></tr><tr><td>AI가 엉뚱한 걸 바꾸지 않았나?</td><td>AI → 팀 AI</td></tr></tbody></table>
+      <figure class="shot role-shot"><a href="assets/roles/pm-activity.png" title="원본 크기로 보기"><img src="assets/roles/pm-activity.png" width="748" height="560" alt="활동 화면: 시간순 변경 목록과 분류 필터" loading="lazy"></a><figcaption>활동은 자리를 비운 사이 바뀐 것을 모아 보여 줍니다.</figcaption></figure>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GameJam Hub</span>
+    <a href="./">소개</a>
+    <a href="guide.html">사용 설명서</a>
+    <a href="roles.html">역할별 안내</a>
+    <a href="dlc.html">템플릿 팩</a>
+  </div>
+</footer>
+</body>
+</html>

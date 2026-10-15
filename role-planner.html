@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>기획자 안내 · GameJam Hub</title>
+<meta name="description" content="기획자가 GameJam Hub로 기획서, 카드, 수치 표, 기획 변경을 다루는 흐름.">
+<link rel="icon" href="assets/mark.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/mark.svg" width="28" height="28" alt=""> GameJam Hub</a>
+    <nav aria-label="사이트">
+      <a href="./">소개</a>
+      <a href="guide.html">사용 설명서</a>
+      <a href="roles.html" aria-current="page">역할별 안내</a>
+      <a href="remote.html">원격 팀</a>
+      <a href="dlc.html">템플릿 팩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <aside aria-label="목차">
+      <a href="#start">시작</a>
+      <a href="#doc">회의 → 기획서</a>
+      <a href="#guide">디자인 가이드·레퍼런스</a>
+      <a href="#cards">카드와 아트 요청</a>
+      <a href="#data">수치 기획</a>
+      <a href="#change">기획 변경 전하기</a>
+      <a href="#review">검토와 플레이</a>
+      <a href="#log">틈틈이 기록</a>
+      <a href="#end">마감</a>
+      <a href="#ai">AI와 함께</a>
+    </aside>
+    <article>
+      <nav class="role-switch" aria-label="역할"><a href="role-planner.html" aria-current="page">기획자</a><a href="role-artist.html">아티스트</a><a href="role-programmer.html">프로그래머</a><a href="role-pm.html">PM · 호스트</a></nav>
+      <h1>기획자</h1>
+      <p class="intro">기획서를 쓰고, 그 내용을 카드와 아트 요청으로 바꿔 팀에 나누고, 바뀐 것을 빠짐없이 전합니다.</p>
+      <h2 id="start">시작</h2>
+      <ul>
+        <li>같은 Wi-Fi에서 <b>방 코드</b>로 참가하고 역할 <b>기획</b>을 고릅니다. PM을 겸하면 함께 고르세요.</li>
+      </ul>
+      <h2 id="doc">회의 → 기획서</h2>
+      <ul>
+        <li><b>기획 → 새 문서</b>에서 템플릿을 고릅니다. 기본 템플릿과 호스트가 받은 <a href="dlc.html">템플릿 팩</a>이 함께 나옵니다.</li>
+        <li>기획서는 <b>제목 단위로 여러 사람이 동시에</b> 고칩니다. 내가 ‘전투’ 절을 고치는 동안 다른 사람은 ‘UI’ 절을 고칠 수 있습니다.</li>
+        <li>상태도·흐름도는 <b>도식</b>, 분위기는 <b>무드보드</b>, 엑셀처럼 쓸 표는 <b>기획용 시트</b>로 만듭니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/planner-doc.png" title="원본 크기로 보기"><img src="assets/roles/planner-doc.png" width="748" height="620" alt="기획 문서 화면: 왼쪽 문서 목록, 가운데 기획서 본문과 버전" loading="lazy"></a><figcaption>기획서는 버전마다 남고, 절 단위로 함께 편집합니다.</figcaption></figure>
+      <h2 id="guide">디자인 가이드 · 레퍼런스</h2>
+      <ul>
+        <li>아티스트와 함께 <b>디자인 가이드</b>(색, 분위기, 해야 할 것·하지 말 것)를 씁니다.</li>
+        <li>참고 이미지는 <b>레퍼런스</b>에 끌어 놓고 태그를 달아 관련 카드에 연결합니다. 같은 그림은 한 번만 올라갑니다.</li>
+      </ul>
+      <h2 id="cards">카드와 아트 요청</h2>
+      <ul>
+        <li>카드에는 제목만이 아니라 <b>왜 필요한가, 쓰이는 곳, 규격, 결과물, 다음에 넘길 사람</b>을 적습니다. 받는 사람이 열자마자 일을 시작할 수 있게요.</li>
+        <li>그림이 필요하면 <b>에셋 슬롯</b>(아트 요청)을 만듭니다. 아트 보드에 카드가 생기고, 파일 이름은 여기서 정합니다. 아티스트는 이름을 신경 쓰지 않아도 됩니다.</li>
+        <li>보드 위의 <b>일정</b>(기획 확정, 1차 플레이 가능, 아트 마감, 최종 빌드)으로 전체 흐름을 맞춥니다.</li>
+      </ul>
+      <h2 id="data">수치 기획 (데이터 표)</h2>
+      <ul>
+        <li>밸런스 값은 <b>데이터</b> 화면의 표에 적습니다. 엑셀·CSV를 불러와도 됩니다.</li>
+        <li>표는 엔진용 JSON으로 바로 나갑니다. 프로그래머가 <b>데이터 업데이트</b>를 누르면 게임에 들어갑니다.</li>
+        <li>값을 고치면 ‘누가, 언제, 이전 → 새 값’이 남습니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/planner-data.png" title="원본 크기로 보기"><img src="assets/roles/planner-data.png" width="748" height="520" alt="데이터 표: 적 이름, 체력, 공격력, 이동 속도 열" loading="lazy"></a><figcaption>데이터 표는 엔진이 읽는 JSON이 됩니다.</figcaption></figure>
+      <h2 id="change">기획 변경을 팀에 전하기</h2>
+      <ul>
+        <li>기획서를 고치면 <b>이전 버전과 비교</b>에서 바뀐 값만 모아 볼 수 있습니다.</li>
+        <li>각 값 옆의 <b>변경으로 남기기</b>를 누르면 기획 변경 기록이 됩니다. 영향받는 역할에 알림이 가고, ‘반영 중 → 반영 완료’까지 따라갑니다.</li>
+        <li><b>작업에 연결</b>로 그 값을 쓰는 카드를 이어 두면, 담당자가 무엇을 고쳐야 하는지 바로 압니다.</li>
+      </ul>
+      <figure class="shot role-shot"><a href="assets/roles/planner-changes.png" title="원본 크기로 보기"><img src="assets/roles/planner-changes.png" width="748" height="620" alt="기획서 v1과 비교: Dash Cooldown 1.0 → 1.5, Enemy HP 100 → 80, 추가·삭제된 값" loading="lazy"></a><figcaption>“그거 바뀐 거 몰랐어요”를 막는 화면입니다.</figcaption></figure>
+      <h2 id="review">결과물 검토와 플레이</h2>
+      <ul>
+        <li>내가 요청한 그림이 <b>준비 완료</b>가 되면 <b>승인</b>하거나, 이유와 함께 <b>수정 요청</b>을 보냅니다. 수정 요청은 그림을 아티스트에게 돌려보냅니다.</li>
+        <li>빌드가 올라오면 <b>PLAY</b>로 실행하고, 게임 중 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Q</kbd>로 스크린샷과 함께 문제를 보고합니다. 기획 의도와 다른 점도 남기세요.</li>
+      </ul>
+      <h2 id="log">틈틈이 기록</h2>
+      <ul>
+        <li>기획은 카드로 남지 않는 일이 많습니다(회의 정리, 조율, 플레이 테스트). <b>문제해결기록 → 작업 일지</b>에 한 줄씩 남기세요.</li>
+        <li>막혔던 기획 문제(예: “난이도 곡선이 2스테이지에서 꺾임”)도 <b>문제 해결</b>로 남기면 좋은 포트폴리오 재료가 됩니다.</li>
+      </ul>
+      <h2 id="end">마감</h2>
+      <ul>
+        <li><b>크레딧</b>에 맡은 일을 적고 팀원 확인을 받습니다. 서로 <b>한마디</b>도 남기세요.</li>
+        <li><b>포트폴리오 받기</b>: 맡은 일, 작업 하이라이트, 반영된 기획 변경, 문제 해결, 팀원이 본 나가 담긴 HTML을 받습니다.</li>
+      </ul>
+      <h2 id="ai">AI와 함께</h2>
+      <p>왼쪽 메뉴 <b>AI</b>에서 내 Codex·Claude를 연결하면 “○○의 AI”로 함께 일합니다. 바꾼 것은 모두 기록되고 한 번에 되돌릴 수 있습니다. 도구 묶음은 <b>기획</b>.</p>
+      <table><thead><tr><th>언제</th><th>AI에게</th><th>사용량 아끼기</th></tr></thead><tbody><tr><td>회의 직후</td><td>“회의 메모로 기획서 ‘핵심 루프’ 절 써 줘”</td><td>새 대화로 시작</td></tr><tr><td>카드 정리</td><td>“규격이 빈 카드만 채워 줘”</td><td>범위를 좁혀서</td></tr><tr><td>전체 점검</td><td>“카드 전체 검토해 줘”</td><td>필요할 때만</td></tr><tr><td>회의 메모 → 카드</td><td>“이 메모로 카드와 아트 요청 만들어 줘” <span class="soon">준비 중</span></td><td>만들기 전에 목록 확인</td></tr></tbody></table>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>GameJam Hub</span>
+    <a href="./">소개</a>
+    <a href="guide.html">사용 설명서</a>
+    <a href="roles.html">역할별 안내</a>
+    <a href="dlc.html">템플릿 팩</a>
+  </div>
+</footer>
+</body>
+</html>

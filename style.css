@@ -155,3 +155,22 @@ th { font-weight: 650; color: var(--ink-2); }
 /* ---------- footer ---------- */
 footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 14px; color: var(--ink-2); }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+
+/* ----- 역할별 안내 ----- */
+.role-switch { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 28px; }
+.role-switch a { padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-2); text-decoration: none; font-size: 15px; }
+.role-switch a:hover { color: var(--ink); border-color: var(--ink-2); }
+.role-switch a[aria-current="page"] { background: var(--pine); border-color: var(--pine); color: var(--paper); font-weight: 650; }
+.role-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 28px 0; }
+.role-card { display: grid; gap: 6px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 14px; color: var(--ink); text-decoration: none; background: var(--surface); }
+.role-card:hover { border-color: var(--pine); }
+.role-card b { font-size: 20px; letter-spacing: -0.01em; }
+.role-card span { color: var(--ink-2); font-size: 15.5px; line-height: 1.6; }
+@media (max-width: 640px) { .role-cards { grid-template-columns: 1fr; } }
+.doc figure.role-shot { margin: 22px 0 30px; }
+.doc figure.role-shot.narrow { max-width: 432px; }
+.doc figure.role-shot figcaption { padding: 10px 14px; margin: 0; border-top: 1px solid var(--line); }
+.soon { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: var(--amber); border: 1px solid var(--amber); white-space: nowrap; vertical-align: 1px; }
+ol.flow { list-style: none; padding: 0; margin: 18px 0 8px; display: flex; flex-wrap: wrap; gap: 6px 4px; font-size: 14.5px; }
+ol.flow li { margin: 0 !important; padding: 4px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+ol.flow li + li::before { content: "→"; margin: 0 8px 0 -2px; color: var(--ink-2); }
