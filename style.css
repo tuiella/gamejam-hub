@@ -63,7 +63,10 @@ p { text-wrap: pretty; margin: 0 0 1em; }
 @media (max-width: 640px) { .top .wrap { height: auto; flex-wrap: wrap; padding: 14px 0; gap: 10px 18px; } .top nav { margin-left: 0; flex-wrap: wrap; gap: 6px 16px; } }
 
 /* ---------- hero: the room code is the product ---------- */
-.hero { padding: 72px 0 40px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 56px; align-items: center; }
+.hero { padding: 72px 0 40px; display: grid; grid-template-columns: 1fr; gap: 44px; justify-items: center; text-align: center; }
+.hero .lede { margin-left: auto; margin-right: auto; }
+.hero .actions { justify-content: center; }
+.hero .ticket { width: 100%; max-width: 560px; text-align: left; }
 .hero h1 { font-size: clamp(34px, 4.6vw, 56px); font-weight: 800; letter-spacing: -0.02em; }
 .hero .lede { font-size: 19px; color: var(--ink-2); max-width: 36em; margin-top: 20px; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 30px; }
@@ -80,7 +83,7 @@ p { text-wrap: pretty; margin: 0 0 1em; }
 .ticket ol { margin: 0; padding: 18px 0 0; border-top: 1px dashed var(--line); list-style: none; display: grid; gap: 10px; font-size: 15px; color: var(--ink-2); }
 .ticket li { display: flex; gap: 12px; }
 .ticket li b { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--pine-soft); color: var(--pine-deep); font-size: 13px; display: grid; place-items: center; }
-@media (max-width: 860px) { .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 44px; } }
+@media (max-width: 860px) { .hero { gap: 32px; padding-top: 44px; } }
 
 .shot { border-radius: 14px; border: 1px solid var(--line); overflow: hidden; background: var(--surface); }
 .shot img { outline: 1px solid oklch(0 0 0 / 0.06); outline-offset: -1px; }
