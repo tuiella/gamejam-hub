@@ -6,6 +6,9 @@
 <title>GameJam Hub</title>
 <meta name="description" content="인터넷 없이, 호스트 PC가 연 와이파이에서 방 코드 하나로 모이는 게임잼 협업 앱. 작업 카드, 기획 문서, 에셋, Unity 동기화, 빌드 실행, QA까지 한곳에서.">
 <link rel="icon" href="assets/mark.svg">
+<link rel="preload" href="fonts/hs-hyosung/HS%20HYOSUNG-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hs-hyosung/HS%20HYOSUNG-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,16 +28,16 @@
 <main>
   <section class="wrap hero">
     <div>
-      <h1>인터넷 없이,<br>방 코드 하나로 모이는 게임잼</h1>
+      <h1><span class="line">인터넷 없이,</span> <span class="line">방&nbsp;코드 하나로 모이는 게임잼</span></h1>
       <p class="lede">한 사람의 PC가 호스트가 되어 팀 와이파이를 열고, 팀원은 거기에 접속해 코드만 입력하면 됩니다. 작업 카드부터 기획 문서, 에셋, 빌드 실행, 버그 보고까지 48시간 동안 필요한 것을 한 창에서 주고받습니다.</p>
       <div class="actions">
         <a class="button primary" href="https://github.com/tuiella/gamejam-hub/releases/latest/download/GameJam-Hub-Windows.zip">Windows용 다운로드</a>
         <a class="button" href="guide.html">사용 설명서 보기</a>
       </div>
-      <p class="note" style="margin-top:14px">Windows 10·11. 설치 없이 압축을 풀고 <b>GameJam Hub.exe</b>를 실행합니다. 처음 실행할 때 "Windows의 PC 보호" 창이 뜨면 <b>추가 정보 → 실행</b>을 누르세요. <a href="https://github.com/tuiella/gamejam-hub/releases/latest">버전 기록</a></p>
+      <p class="note" style="margin-top:14px">Windows 10, 11. 설치 없이 압축을 풀고 <b class="nobr">GameJam Hub.exe</b>를 실행합니다. 처음 실행할 때 "Windows의 PC 보호" 창이 뜨면 <b>추가 정보&nbsp;→ 실행</b>을 누르세요. <a href="https://github.com/tuiella/gamejam-hub/releases/latest">버전 기록</a></p>
     </div>
     <div class="ticket" aria-label="방 코드 예시">
-      <div class="label">호스트 화면에 보이는 방 코드</div>
+      <div class="label">호스트 화면에 보이는 방&nbsp;코드</div>
       <div class="code">AH83<span>-</span>G2</div>
       <ol>
         <li><b>1</b>호스트가 잼을 열면 팀 와이파이가 켜집니다.</li>
@@ -46,13 +49,13 @@
 
   <div class="wrap hero-shot">
     <figure class="shot" style="margin:0">
-      <img src="assets/board.png" width="2880" height="1800" alt="작업 보드: 담당 없음·대기·진행 중·완료 칸과 오른쪽의 카드 상세(작업 지침, 왜 필요한가, 쓰이는 곳, 규격, 결과물)">
+      <img src="assets/board.png" width="2880" height="1800" alt="작업 보드: 담당 없음, 대기, 진행 중, 완료 칸과 오른쪽의 카드 상세(작업 지침, 왜 필요한가, 쓰이는 곳, 규격, 결과물)">
     </figure>
   </div>
 
   <section class="wrap loop">
     <h2>잼 한 바퀴가 끊기지 않게</h2>
-    <p>디스코드에 파일을 던지고 "최신 거 어디 있어요?"를 묻는 대신, 만드는 순서 그대로 이어집니다. 언제 열어도 세 가지가 바로 보입니다. 최신 버전은 무엇인지, 무엇이 바뀌었는지, 다음에 무엇을 할지.</p>
+    <p>디스코드에 파일을 올리고 "최신 거 어디 있어요?"라고 물을 일이 없습니다. 기획부터 QA까지 한 앱에서 이어지고, 앱을 열면 최신 버전과 바뀐 것, 다음에 할 일이 바로 보입니다.</p>
     <ol class="steps">
       <li><strong>기획</strong><span>카드와 문서로 할 일과 이유를 정리</span></li>
       <li><strong>공유</strong><span>레퍼런스와 에셋 요청을 카드에 연결</span></li>
@@ -68,7 +71,7 @@
       <div class="feature">
         <div class="text">
           <h3>카드를 열면 바로 일을 시작할 수 있게</h3>
-          <p>작업 카드는 제목과 담당자만이 아니라, 왜 필요한지, 어디에 쓰이는지, 규격과 결과물을 함께 가집니다. 다음에 넘길 사람까지 적혀 있어서 비동기로 일을 주고받기 좋습니다.</p>
+          <p>작업 카드에는 제목과 담당자 말고도 왜 필요한지, 어디에 쓰이는지, 규격과 결과물이 적혀 있습니다. 다음에 넘길 사람도 적혀 있어서 서로 자리에 없어도 일을 넘길 수 있습니다.</p>
           <ul>
             <li>끌어 놓기로 가져가기, 시작, 완료</li>
             <li>역할별로 먼저 보이는 화면이 다름</li>
@@ -84,8 +87,8 @@
           <p>문서는 제목 단위로 여러 사람이 동시에 고칩니다. 도식은 상자를 놓으면 격자에 맞고 연결선이 알아서 꺾여서, 정리하지 않아도 깔끔합니다. 엑셀처럼 쓰는 기획용 시트와 이미지 무드보드도 같은 곳에 있습니다.</p>
           <ul>
             <li>기본 템플릿 20여 종과 내려받는 템플릿 팩 50여 종</li>
-            <li>버전마다 바뀐 값을 "1.0 → 1.5"처럼 보여 줌</li>
-            <li>엑셀 불러오기·저장, SVG 내보내기</li>
+            <li>버전마다 바뀐 값을 "1.0&nbsp;→ 1.5"처럼 보여 줌</li>
+            <li>엑셀 파일 불러오기와 저장, SVG 내보내기</li>
           </ul>
         </div>
         <figure class="shot" style="margin:0"><img src="assets/diagram.png" width="2880" height="1800" alt="보스 상태도 도식: 대기, 추적, 공격 예고, 공격, 그로기, 페이즈 전환과 전환 조건" loading="lazy"></figure>
@@ -107,7 +110,7 @@
       <div class="feature flip">
         <div class="text">
           <h3>호스트 PC가 멈춰도 잼은 계속</h3>
-          <p>팀원 한 명을 백업 호스트로 정해 두면 잼 전체를 계속 복사해 둡니다. 호스트 PC가 꺼지면 백업 호스트가 같은 방 코드로 이어받고, 팀원들은 다시 참가할 필요 없이 자동으로 연결됩니다.</p>
+          <p>팀원 한 명을 백업 호스트로 정해 두면 잼 전체를 계속 복사해 둡니다. 호스트 PC가 꺼지면 백업 호스트가 같은 방&nbsp;코드로 이어받고, 팀원들은 다시 참가할 필요 없이 자동으로 연결됩니다.</p>
         </div>
         <figure class="shot" style="margin:0"><img src="assets/hosting.png" width="2880" height="1800" alt="연결 화면: 호스트, 백업 호스트, 팀원과 복사 상태를 보여 주는 도식" loading="lazy"></figure>
       </div>
@@ -115,7 +118,7 @@
       <div class="facts">
         <div><h3>인터넷이 필요 없습니다</h3><p>호스트 PC가 팀 와이파이를 열고 팀원이 거기에 모입니다. 행사장 인터넷이 느려도, 끊겨도, 기기끼리 연결을 막아도 상관없습니다.</p></div>
         <div><h3>데이터는 팀 안에 있습니다</h3><p>모든 파일은 호스트 PC에 저장됩니다. 외부 클라우드로 나가지 않습니다.</p></div>
-        <div><h3>AI로 관리할 수 있습니다</h3><p>팀원마다 자기 Claude나 Codex를 연결해 카드·문서·표를 정리합니다. AI가 여러 개를 만들 때는 제안만 하고 사람이 확인하며, AI가 바꾼 것은 한 번에 되돌립니다.</p></div>
+        <div><h3>AI에게 정리를 맡길 수 있습니다</h3><p>팀원마다 자기 Claude나 Codex를 연결해 카드, 문서, 표를 정리합니다. 카드를 여러 장 만들 때 AI는 제안만 하고, 넣을지는 사람이 정합니다. AI가 바꾼 것은 한 번에 되돌릴 수 있습니다.</p></div>
       </div>
     </div>
   </section>
@@ -129,6 +132,7 @@
     <a href="remote.html">원격 팀</a>
     <a href="dlc.html">템플릿 팩</a>
     <a href="https://github.com/tuiella/gamejam-hub-dlc">템플릿 팩 저장소</a>
+    <small class="credit">이 사이트의 글꼴은 ㈜HS효성의 HS HYOSUNG 서체입니다.</small>
   </div>
 </footer>
 </body>
