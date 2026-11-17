@@ -41,7 +41,7 @@
       <p class="intro">그림과 수치를 Unity로 받아 연결하고, 빌드를 올려 팀 전원이 바로 플레이하게 합니다.</p>
       <h2 id="start">시작</h2>
       <ul>
-        <li>같은 Wi-Fi에서 <b>방 코드</b>로 참가하고 역할 <b>프로그래밍</b>을 고릅니다.</li>
+        <li>호스트가 연 <b>팀 와이파이</b>에 접속해 <b>방 코드</b>로 참가하고 역할 <b>프로그래밍</b>을 고릅니다.</li>
         <li>설정 → Unity 연동에서 <b>Unity 프로젝트 폴더</b>를 한 번 지정합니다. 에셋은 <code>Assets/GameJamSync</code> 아래로 들어갑니다.</li>
       </ul>
       <h2 id="plan">기획 이해</h2>
@@ -66,6 +66,7 @@
       <ul>
         <li>고치기 전에 <kbd>Alt</kbd> <kbd>0</kbd> → <b>문제 기록</b>. 화면 캡처(3초 뒤)나 붙여넣기로 스크린샷을 넣고 상황을 한 줄 적습니다.</li>
         <li>고친 뒤 해결 방법, 해결 화면, 배운 점을 적고 <b>해결 완료</b>. 도와준 사람을 고르면 그 사람의 포트폴리오에도 들어갑니다.</li>
+        <li>QA 이슈를 <b>고침</b>으로 바꾸면 <b>문제 해결로 남기기</b>가 뜹니다. 누르면 QA 설명과 스크린샷이 채워진 기록 창이 열립니다.</li>
       </ul>
       <figure class="shot role-shot"><a href="assets/roles/prog-trouble.png" title="원본 크기로 보기"><img src="assets/roles/prog-trouble.png" width="1180" height="660" alt="문제 해결 기록: 목록과 상세(문제 상황, 스크린샷)" loading="lazy"></a><figcaption>고치기 전 화면과 고친 뒤 화면이 포트폴리오에 나란히 들어갑니다.</figcaption></figure>
       <h2 id="build">빌드 → 플레이 → QA</h2>
@@ -87,7 +88,8 @@
       </ul>
       <h2 id="ai">AI와 함께</h2>
       <p>왼쪽 메뉴 <b>AI</b>에서 Codex·Claude Code를 연결합니다. 도구 묶음은 <b>프로그래밍</b>.</p>
-      <table><thead><tr><th>언제</th><th>AI에게</th><th>사용량 아끼기</th></tr></thead><tbody><tr><td>회의 직후</td><td>“기획서 보고 내 카드 만들어 줘”</td><td>새 대화로 시작</td></tr><tr><td>작업 중</td><td>“규격이 빈 카드만 보여 줘”</td><td>범위를 좁혀서</td></tr><tr><td>버그 수정 후</td><td>“방금 고친 것 문제 해결 기록 초안 써 줘” <span class="soon">준비 중</span></td><td>끝나면 대화 닫기</td></tr><tr><td>하루 끝</td><td>“오늘 한 일 정리해 줘” <span class="soon">준비 중</span></td><td>작은 모델</td></tr></tbody></table>
+      <table><thead><tr><th>언제</th><th>AI에게</th><th>사용량 아끼기</th></tr></thead><tbody><tr><td>회의 직후</td><td>“기획서 보고 내 카드 만들어 줘”</td><td>새 대화로 시작</td></tr><tr><td>작업 중</td><td>“규격이 빈 카드만 보여 줘”</td><td>범위를 좁혀서</td></tr><tr><td>버그 수정 후</td><td>“방금 고친 것 문제 해결 기록 초안 써 줘”</td><td>끝나면 대화 닫기</td></tr><tr><td>하루 끝</td><td>문제해결기록의 <b>AI로 기록 초안 받기</b> 문장을 붙여 넣기</td><td>작은 모델</td></tr></tbody></table>
+      <p>AI는 내 최근 활동(완료한 카드, 올린 빌드, 처리한 QA)을 짧게 받아 일지와 문제 해결 <b>AI 초안</b>을 씁니다. 내가 <b>내 기록으로 확인</b>을 눌러야 포트폴리오에 들어갑니다.</p>
     </article>
   </div>
 </main>
@@ -98,6 +100,7 @@
     <a href="./">소개</a>
     <a href="guide.html">사용 설명서</a>
     <a href="roles.html">역할별 안내</a>
+    <a href="remote.html">원격 팀</a>
     <a href="dlc.html">템플릿 팩</a>
   </div>
 </footer>
